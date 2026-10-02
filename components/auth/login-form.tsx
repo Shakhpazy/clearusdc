@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { redirect } from "next/navigation";
 
 
 
@@ -47,6 +48,7 @@ function LoginForm() {
             setMessage("You’re signed in successfully.");
             setEmail("");
             setPassword("");
+            redirect("/"); // Redirect to the dashboard page after successful login
         }
 
         setIsLoading(false);

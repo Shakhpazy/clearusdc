@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { redirect } from "next/navigation";
 
 function SignupForm() {
 
@@ -38,6 +39,7 @@ function SignupForm() {
             setMessage("Account created. Check your inbox to confirm your email.");
             setEmail("");
             setPassword("");
+            redirect("/login"); // Redirect to the login page after successful signup
         }
 
         setIsLoading(false);
